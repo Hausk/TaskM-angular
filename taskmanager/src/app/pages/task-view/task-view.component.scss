@@ -18,12 +18,19 @@
     width: 25%;
     padding: 40px;
     background: white;
-    border-radius: 10px 0 0 10px;
+    border-radius: 10px;
+    box-shadow: 7px 6px 10px rgba(0,0,0,0.5);
+    z-index: 5;
 }
 .task-list-container {
     display: flex;
+    flex-direction: column;
     flex-grow: 1;
     padding: 40px;
+    height: 90%;
+    margin: auto;
+    border-radius: 0 10px 10px 0;
+    box-shadow: 3px 4px 10px rgba(0 0 0 / 50%);
 }
 
 .title {
@@ -46,9 +53,39 @@
         width: 100%;
         color: #5f5f5f;
         margin-bottom: 5px;
+        border-radius: 5px;
 
         &:hover {
             background: #27d7a1;
         }
+        &.is-active {
+            background-color: #27d7a1;
+            color: #5f5f5f;
+        }
+    }
+}
+
+.tasks {
+    background: #FFF;
+    padding: 15px 20px;
+    border-radius:px 5px;
+    margin-top: 10px;
+    cursor: pointer;
+
+    &:not(.complete) {
+
+        transition: .2s ease;
+
+        &:active {
+            transform: scale(0.95);
+        }
+        &:hover {
+            box-shadow: 0 0 0 7px #eeeeee;
+        }
+    }
+
+    &.complete {
+        text-decoration: line-through;
+        opacity: 0.9;
     }
 }
