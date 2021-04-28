@@ -1,0 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+@import './app/pages/task-view/task-view.component.scss';
+$blue: #009adc;
+$green: #27d7a1;
+$light-green: #45f69e;
+$dark-green: rgb(0,100,80);
+
+html {
+    background: linear-gradient(to right top, $blue, $green);
+}
+body {
+    height: 100vh;
+    font-family: 'Lato', sans-serif;
+}
